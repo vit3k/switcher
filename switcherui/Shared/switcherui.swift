@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct testble2App: App {
+struct switcherui: App {
     var body: some Scene {
         WindowGroup {
             ContentView(ble: BLE())

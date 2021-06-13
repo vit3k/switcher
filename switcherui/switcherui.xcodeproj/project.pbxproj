@@ -13,8 +13,8 @@
 		F9125D502674CE1A002D8040 /* MidiCommandItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9125D4E2674CE1A002D8040 /* MidiCommandItemView.swift */; };
 		F9268F60266AD2ED00D0CEB3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F5F266AD2ED00D0CEB3 /* Tests_iOS.swift */; };
 		F9268F6B266AD2ED00D0CEB3 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F6A266AD2ED00D0CEB3 /* Tests_macOS.swift */; };
-		F9268F6D266AD2ED00D0CEB3 /* testble2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F44266AD2EA00D0CEB3 /* testble2App.swift */; };
-		F9268F6E266AD2ED00D0CEB3 /* testble2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F44266AD2EA00D0CEB3 /* testble2App.swift */; };
+		F9268F6D266AD2ED00D0CEB3 /* switcherui.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F44266AD2EA00D0CEB3 /* switcherui.swift */; };
+		F9268F6E266AD2ED00D0CEB3 /* switcherui.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F44266AD2EA00D0CEB3 /* switcherui.swift */; };
 		F9268F6F266AD2ED00D0CEB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F45266AD2EA00D0CEB3 /* ContentView.swift */; };
 		F9268F70266AD2ED00D0CEB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F45266AD2EA00D0CEB3 /* ContentView.swift */; };
 		F9268F71266AD2ED00D0CEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9268F46266AD2ED00D0CEB3 /* Assets.xcassets */; };
@@ -45,12 +45,12 @@
 /* Begin PBXFileReference section */
 		F9125D4B2674BA16002D8040 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		F9125D4E2674CE1A002D8040 /* MidiCommandItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiCommandItemView.swift; sourceTree = "<group>"; };
-		F9268F44266AD2EA00D0CEB3 /* testble2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testble2App.swift; sourceTree = "<group>"; };
+		F9268F44266AD2EA00D0CEB3 /* switcherui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = switcherui.swift; sourceTree = "<group>"; };
 		F9268F45266AD2EA00D0CEB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F9268F46266AD2ED00D0CEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F9268F4B266AD2ED00D0CEB3 /* testble2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testble2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9268F4B266AD2ED00D0CEB3 /* switcherui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = switcherui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9268F4E266AD2ED00D0CEB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9268F53266AD2ED00D0CEB3 /* testble2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testble2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9268F53266AD2ED00D0CEB3 /* switcherui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = switcherui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9268F55266AD2ED00D0CEB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9268F56266AD2ED00D0CEB3 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		F9268F5B266AD2ED00D0CEB3 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +110,7 @@
 		F9268F43266AD2EA00D0CEB3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				F9268F44266AD2EA00D0CEB3 /* testble2App.swift */,
+				F9268F44266AD2EA00D0CEB3 /* switcherui.swift */,
 				F9268F45266AD2EA00D0CEB3 /* ContentView.swift */,
 				F9268F46266AD2ED00D0CEB3 /* Assets.xcassets */,
 				F9268F81266AE78800D0CEB3 /* ble.swift */,
@@ -124,8 +124,8 @@
 		F9268F4C266AD2ED00D0CEB3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9268F4B266AD2ED00D0CEB3 /* testble2.app */,
-				F9268F53266AD2ED00D0CEB3 /* testble2.app */,
+				F9268F4B266AD2ED00D0CEB3 /* switcherui.app */,
+				F9268F53266AD2ED00D0CEB3 /* switcherui.app */,
 				F9268F5B266AD2ED00D0CEB3 /* Tests iOS.xctest */,
 				F9268F66266AD2ED00D0CEB3 /* Tests macOS.xctest */,
 			);
@@ -170,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F9268F4A266AD2ED00D0CEB3 /* testble2 (iOS) */ = {
+		F9268F4A266AD2ED00D0CEB3 /* switcherui (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9268F75266AD2ED00D0CEB3 /* Build configuration list for PBXNativeTarget "testble2 (iOS)" */;
+			buildConfigurationList = F9268F75266AD2ED00D0CEB3 /* Build configuration list for PBXNativeTarget "switcherui (iOS)" */;
 			buildPhases = (
 				F9268F47266AD2ED00D0CEB3 /* Sources */,
 				F9268F48266AD2ED00D0CEB3 /* Frameworks */,
@@ -182,14 +182,14 @@
 			);
 			dependencies = (
 			);
-			name = "testble2 (iOS)";
+			name = "switcherui (iOS)";
 			productName = "testble2 (iOS)";
-			productReference = F9268F4B266AD2ED00D0CEB3 /* testble2.app */;
+			productReference = F9268F4B266AD2ED00D0CEB3 /* switcherui.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F9268F52266AD2ED00D0CEB3 /* testble2 (macOS) */ = {
+		F9268F52266AD2ED00D0CEB3 /* switcherui (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9268F78266AD2ED00D0CEB3 /* Build configuration list for PBXNativeTarget "testble2 (macOS)" */;
+			buildConfigurationList = F9268F78266AD2ED00D0CEB3 /* Build configuration list for PBXNativeTarget "switcherui (macOS)" */;
 			buildPhases = (
 				F9268F4F266AD2ED00D0CEB3 /* Sources */,
 				F9268F50266AD2ED00D0CEB3 /* Frameworks */,
@@ -199,9 +199,9 @@
 			);
 			dependencies = (
 			);
-			name = "testble2 (macOS)";
+			name = "switcherui (macOS)";
 			productName = "testble2 (macOS)";
-			productReference = F9268F53266AD2ED00D0CEB3 /* testble2.app */;
+			productReference = F9268F53266AD2ED00D0CEB3 /* switcherui.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F9268F5A266AD2ED00D0CEB3 /* Tests iOS */ = {
@@ -265,7 +265,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F9268F42266AD2EA00D0CEB3 /* Build configuration list for PBXProject "testble2" */;
+			buildConfigurationList = F9268F42266AD2EA00D0CEB3 /* Build configuration list for PBXProject "switcherui" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -278,8 +278,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9268F4A266AD2ED00D0CEB3 /* testble2 (iOS) */,
-				F9268F52266AD2ED00D0CEB3 /* testble2 (macOS) */,
+				F9268F4A266AD2ED00D0CEB3 /* switcherui (iOS) */,
+				F9268F52266AD2ED00D0CEB3 /* switcherui (macOS) */,
 				F9268F5A266AD2ED00D0CEB3 /* Tests iOS */,
 				F9268F65266AD2ED00D0CEB3 /* Tests macOS */,
 			);
@@ -327,7 +327,7 @@
 				F9125D4F2674CE1A002D8040 /* MidiCommandItemView.swift in Sources */,
 				F9125D4C2674BA16002D8040 /* CustomPicker.swift in Sources */,
 				F9268F6F266AD2ED00D0CEB3 /* ContentView.swift in Sources */,
-				F9268F6D266AD2ED00D0CEB3 /* testble2App.swift in Sources */,
+				F9268F6D266AD2ED00D0CEB3 /* switcherui.swift in Sources */,
 				F9BF45EC26715D3100EF2C97 /* Loopcheck.swift in Sources */,
 				F9268F82266AE78800D0CEB3 /* ble.swift in Sources */,
 			);
@@ -340,7 +340,7 @@
 				F9125D502674CE1A002D8040 /* MidiCommandItemView.swift in Sources */,
 				F9125D4D2674BA16002D8040 /* CustomPicker.swift in Sources */,
 				F9268F70266AD2ED00D0CEB3 /* ContentView.swift in Sources */,
-				F9268F6E266AD2ED00D0CEB3 /* testble2App.swift in Sources */,
+				F9268F6E266AD2ED00D0CEB3 /* switcherui.swift in Sources */,
 				F9BF45ED26715D3100EF2C97 /* Loopcheck.swift in Sources */,
 				F9268F83266AE78800D0CEB3 /* ble.swift in Sources */,
 			);
@@ -367,12 +367,12 @@
 /* Begin PBXTargetDependency section */
 		F9268F5D266AD2ED00D0CEB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F9268F4A266AD2ED00D0CEB3 /* testble2 (iOS) */;
+			target = F9268F4A266AD2ED00D0CEB3 /* switcherui (iOS) */;
 			targetProxy = F9268F5C266AD2ED00D0CEB3 /* PBXContainerItemProxy */;
 		};
 		F9268F68266AD2ED00D0CEB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F9268F52266AD2ED00D0CEB3 /* testble2 (macOS) */;
+			target = F9268F52266AD2ED00D0CEB3 /* switcherui (macOS) */;
 			targetProxy = F9268F67266AD2ED00D0CEB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -503,8 +503,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = witek.testble2;
-				PRODUCT_NAME = testble2;
+				PRODUCT_BUNDLE_IDENTIFIER = witek.switchui;
+				PRODUCT_NAME = switcherui;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,8 +525,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = witek.testble2;
-				PRODUCT_NAME = testble2;
+				PRODUCT_BUNDLE_IDENTIFIER = witek.switchui;
+				PRODUCT_NAME = switcherui;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -551,8 +551,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = witek.testble2;
-				PRODUCT_NAME = testble2;
+				PRODUCT_BUNDLE_IDENTIFIER = witek.switchui;
+				PRODUCT_NAME = switcherui;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -575,8 +575,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = witek.testble2;
-				PRODUCT_NAME = testble2;
+				PRODUCT_BUNDLE_IDENTIFIER = witek.switchui;
+				PRODUCT_NAME = switcherui;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -674,7 +674,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F9268F42266AD2EA00D0CEB3 /* Build configuration list for PBXProject "testble2" */ = {
+		F9268F42266AD2EA00D0CEB3 /* Build configuration list for PBXProject "switcherui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9268F73266AD2ED00D0CEB3 /* Debug */,
@@ -683,7 +683,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9268F75266AD2ED00D0CEB3 /* Build configuration list for PBXNativeTarget "testble2 (iOS)" */ = {
+		F9268F75266AD2ED00D0CEB3 /* Build configuration list for PBXNativeTarget "switcherui (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9268F76266AD2ED00D0CEB3 /* Debug */,
@@ -692,7 +692,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9268F78266AD2ED00D0CEB3 /* Build configuration list for PBXNativeTarget "testble2 (macOS)" */ = {
+		F9268F78266AD2ED00D0CEB3 /* Build configuration list for PBXNativeTarget "switcherui (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9268F79266AD2ED00D0CEB3 /* Debug */,
