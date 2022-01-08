@@ -19,22 +19,22 @@ struct MidiCommandItemView: View {
         //print(cmd)
         return HStack {
             Text(String(index)).frame(width: 10)
-            CustomPicker("Ch", selection: $cmd.channel, onChange: self.update) {
+            CustomPicker("Ch \(cmd.channel)", selection: $cmd.channel, onChange: self.update) {
                 ForEach((1...16), id: \.self) {
                     Text("\($0)").tag($0)
                 }
             }.frame(width: 50)
-            CustomPicker("", selection: $cmd.command, onChange: self.update) {
+            CustomPicker("\(cmd.command)", selection: $cmd.command, onChange: self.update) {
                 Text("Empty").tag(MidiCommandType.Empty)
                 Text("Program change").tag(MidiCommandType.ProgramChange)
                 Text("Control change").tag(MidiCommandType.ControlChange)
             }.frame(width: 150)
-            CustomPicker("", selection: $cmd.data1, onChange: self.update) {
+            CustomPicker("\(cmd.data1)", selection: $cmd.data1, onChange: self.update) {
                 ForEach((0...127), id: \.self) {
                     Text("\($0)").tag($0)
                 }
             }.frame(width: 50)
-            CustomPicker("", selection: $cmd.data2, onChange: self.update) {
+            CustomPicker("\(cmd.data2)", selection: $cmd.data2, onChange: self.update) {
                 ForEach((0...127), id: \.self) {
                     Text("\($0)").tag($0)
                 }

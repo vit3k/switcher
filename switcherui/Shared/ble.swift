@@ -179,15 +179,15 @@ class BLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, ObservableO
         }
     }
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        if characteristic.uuid == presetDataCharacteristicUUID {
+        /*if characteristic.uuid == presetDataCharacteristicUUID {
             let array = [UInt8](characteristic.value!)
             print(array)
-        }
+        }*/
     }
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if characteristic.uuid == presetDataCharacteristicUUID {
             let array = [UInt8](characteristic.value!)
-            print(array)
+            print("from ble: \(array)")
             var newPreset = Preset(
                 bank: Int(array[0] >> 4),
                 preset: Int(array[0] & 0x0F),
@@ -259,7 +259,7 @@ class BLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, ObservableO
         }
         array.append(UInt8(preset.clock))
         peripheral.writeValue(Data(array), for: presetDataCharacteristic, type: CBCharacteristicWriteType.withResponse)
-        print(array)
+        print("update: \(array)")
     }
     
     func changePreset(bank: Int, preset: Int) {

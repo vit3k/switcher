@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,11 @@
 		F9268F72266AD2ED00D0CEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9268F46266AD2ED00D0CEB3 /* Assets.xcassets */; };
 		F9268F82266AE78800D0CEB3 /* ble.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F81266AE78800D0CEB3 /* ble.swift */; };
 		F9268F83266AE78800D0CEB3 /* ble.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9268F81266AE78800D0CEB3 /* ble.swift */; };
+		F9886BC82677433200962D8D /* ScanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9886BC72677433200962D8D /* ScanningView.swift */; };
+		F9886BC92677433200962D8D /* ScanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9886BC72677433200962D8D /* ScanningView.swift */; };
+		F9886BCB267743A700962D8D /* PresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9886BCA267743A700962D8D /* PresetView.swift */; };
+		F9886BCC267743A700962D8D /* PresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9886BCA267743A700962D8D /* PresetView.swift */; };
+		F98B3A272678A5BA00266831 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = F98B3A262678A5BA00266831 /* PartialSheet */; };
 		F9BF45EC26715D3100EF2C97 /* Loopcheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BF45EB26715D3100EF2C97 /* Loopcheck.swift */; };
 		F9BF45ED26715D3100EF2C97 /* Loopcheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BF45EB26715D3100EF2C97 /* Loopcheck.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +65,8 @@
 		F9268F6A266AD2ED00D0CEB3 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		F9268F6C266AD2ED00D0CEB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9268F81266AE78800D0CEB3 /* ble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ble.swift; sourceTree = "<group>"; };
+		F9886BC72677433200962D8D /* ScanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningView.swift; sourceTree = "<group>"; };
+		F9886BCA267743A700962D8D /* PresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetView.swift; sourceTree = "<group>"; };
 		F9BF45EB26715D3100EF2C97 /* Loopcheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loopcheck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98B3A272678A5BA00266831 /* PartialSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +125,8 @@
 				F9BF45EB26715D3100EF2C97 /* Loopcheck.swift */,
 				F9125D4B2674BA16002D8040 /* CustomPicker.swift */,
 				F9125D4E2674CE1A002D8040 /* MidiCommandItemView.swift */,
+				F9886BC72677433200962D8D /* ScanningView.swift */,
+				F9886BCA267743A700962D8D /* PresetView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -183,6 +193,9 @@
 			dependencies = (
 			);
 			name = "switcherui (iOS)";
+			packageProductDependencies = (
+				F98B3A262678A5BA00266831 /* PartialSheet */,
+			);
 			productName = "testble2 (iOS)";
 			productReference = F9268F4B266AD2ED00D0CEB3 /* switcherui.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +287,9 @@
 				Base,
 			);
 			mainGroup = F9268F3E266AD2EA00D0CEB3;
+			packageReferences = (
+				F98B3A252678A5BA00266831 /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = F9268F4C266AD2ED00D0CEB3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,7 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9125D4F2674CE1A002D8040 /* MidiCommandItemView.swift in Sources */,
+				F9886BCB267743A700962D8D /* PresetView.swift in Sources */,
 				F9125D4C2674BA16002D8040 /* CustomPicker.swift in Sources */,
+				F9886BC82677433200962D8D /* ScanningView.swift in Sources */,
 				F9268F6F266AD2ED00D0CEB3 /* ContentView.swift in Sources */,
 				F9268F6D266AD2ED00D0CEB3 /* switcherui.swift in Sources */,
 				F9BF45EC26715D3100EF2C97 /* Loopcheck.swift in Sources */,
@@ -338,7 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9125D502674CE1A002D8040 /* MidiCommandItemView.swift in Sources */,
+				F9886BCC267743A700962D8D /* PresetView.swift in Sources */,
 				F9125D4D2674BA16002D8040 /* CustomPicker.swift in Sources */,
+				F9886BC92677433200962D8D /* ScanningView.swift in Sources */,
 				F9268F70266AD2ED00D0CEB3 /* ContentView.swift in Sources */,
 				F9268F6E266AD2ED00D0CEB3 /* switcherui.swift in Sources */,
 				F9BF45ED26715D3100EF2C97 /* Loopcheck.swift in Sources */,
@@ -720,6 +740,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F98B3A252678A5BA00266831 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:AndreaMiotto/PartialSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F98B3A262678A5BA00266831 /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F98B3A252678A5BA00266831 /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9268F3F266AD2EA00D0CEB3 /* Project object */;
 }

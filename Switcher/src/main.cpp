@@ -81,6 +81,7 @@ Bank banks[5];
 int currentBank = 0;
 int currentPreset = 0;
 unsigned long lastClockTime;
+unsigned int channel = 0;
 
 Preferences preferences;
 
@@ -153,6 +154,7 @@ void setup() {
   Serial.begin(115200);
   preferences.begin("config");
   //preferences.clear();
+  channel = preferences.getUChar("channel", 0x00);
   auto presetId = preferences.getUChar("lastPresetId", 0x00);
   currentBank = presetId >> 4;
   currentPreset = presetId & 0x0F;
@@ -311,22 +313,21 @@ void updateButtons()
     }
     bankUpButton.update();
     bankDownButton.update();
-    //encoder1button.update();
 }
 
 
 void loop() {
-  MIDI.read();
-  /*auto current = micros();
-  if (current - lastClockTime > 1000000) {
-    lastClockTime = current;
-    currentPreset++;
-    if (currentPreset > 4) {
-      currentPreset = 0;
+  // change preset on MIDI input
+  if (MIDI.read()) {
+    if (MIDI.getChannel() == 0 && MIDI.getType() == midi::ProgramChange) {
+      auto midiPreset = MIDI.getData1();
+      auto bankNumber = midiPreset / 5;
+      auto presetNumber = midiPreset % 5;
+
+      changePreset(banks[bankNumber].presets[presetNumber]);
     }
-    auto preset = banks[currentBank].presets[currentPreset];
-    changePreset(preset);
-  }*/
+  }
+
   updateButtons();
   if (bankUpButton.pressed()) {
     nextBank();
@@ -341,7 +342,7 @@ void loop() {
         changePreset(banks[currentBank].presets[btnIdx]);
       }
   }
-  auto preset = banks[currentBank].presets[currentPreset];
+  /*auto preset = banks[currentBank].presets[currentPreset];
   if (preset.clock != 0) {
     // TODO: clock implementation  
     // 24 times per quarter note
@@ -355,7 +356,7 @@ void loop() {
       MIDI.sendClock();
       lastClockTime = currentUs;
     }
-  }
+  }*/
     
 }
 

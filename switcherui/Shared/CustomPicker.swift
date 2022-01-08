@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 struct CustomPicker<SelectionValue, Content> : View where SelectionValue : Hashable, Content : View {
+    @EnvironmentObject var partialSheetManager: PartialSheetManager
     var label: String
     @Binding var selection: SelectionValue
+    
     var onChange: () -> Void
     var content: () -> Content
     
@@ -19,27 +22,39 @@ struct CustomPicker<SelectionValue, Content> : View where SelectionValue : Hasha
         self._selection = selection
         self.content = content
         self.onChange = onChange
+        
     }
     
     var body: some View {
-        let binding = Binding(
-            get: { self.selection },
-            set: { self.selection = $0
+        let binding = Binding (
+            get: {self.selection},
+            set: {self.selection = $0
                 onChange()
             }
         )
-        return Picker(selection: binding.animation(), label: Text("\(label) \(String(describing: selection))")
-                        .allowsTightening(false), content: content ).allowsTightening(false)
-            .pickerStyle(MenuPickerStyle())
+        return Button(label) {
+            print(label)
+            partialSheetManager.showPartialSheet(onChange) {
+                VStack {
+                    Picker(label, selection: binding, content: content ).labelsHidden()
+                    Button("Done") {
+                        partialSheetManager.closePartialSheet()
+                        onChange()
+                    }
+                }
+            }
+        }.foregroundColor(Color.blue)
     }
 }
 
 struct CustomPicker_Previews: PreviewProvider {
     static var previews: some View {
-        CustomPicker("", selection: Binding.constant(MidiCommandType.ProgramChange), onChange: {
+        CustomPicker("test", selection: Binding.constant(MidiCommandType.ProgramChange), onChange: {
             print("onchange")
         }) {
-            Text("Program Chage ").tag(MidiCommandType.ProgramChange)
+            Text("Empty").tag(MidiCommandType.Empty)
+            Text("Program Change").tag(MidiCommandType.ProgramChange)
+            Text("Control Change").tag(MidiCommandType.ControlChange)
         }.frame(width: 100)
     }
 }

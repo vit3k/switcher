@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 @main
 struct switcherui: App {
     var body: some Scene {
+        let sheetManager: PartialSheetManager = PartialSheetManager()
         WindowGroup {
             ContentView(ble: BLE())
             //ContentView(ble: BLE(isConnected: true))
+                .environmentObject(sheetManager)
         }
     }
 }
